@@ -1,0 +1,17 @@
+.crown{
+  padding: 8px;
+  display: flex;
+  width: 100%;
+  border: solid 1px #525252;
+}
+.crown_logo{
+  margin-left: 12px;
+  width: 80%;
+  border: solid 1px #525252;
+}
+.crown_account{
+  width: 20%;
+  display: flex;
+  border: solid 1px #525252;
+
+}
