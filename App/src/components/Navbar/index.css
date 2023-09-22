@@ -1,0 +1,10 @@
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+li{
+    padding: 10px;
+}
+a{
+    color: #1e1e1e;
+}

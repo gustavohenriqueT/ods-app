@@ -1,17 +1,15 @@
 .crown{
   padding: 8px;
   display: flex;
-  width: 100%;
-  border: solid 1px #525252;
+  width: 100vw;
 }
 .crown_logo{
   margin-left: 12px;
-  width: 80%;
-  border: solid 1px #525252;
+  width: 70vw;
 }
 .crown_account{
-  width: 20%;
+  width: 30vw;
   display: flex;
-  border: solid 1px #525252;
-
+  justify-content: space-around;
+  align-items: center;
 }

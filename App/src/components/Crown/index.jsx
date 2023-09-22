@@ -7,7 +7,7 @@ const Crown = () =>{
     return (
         <div className="crown">
             <div className="crown_logo">
-                <img alt="logo"/>
+                <div style={{width:"200px",height:"32px", backgroundColor:"lightgreen"}}/>
             </div>
             <div className="crown_account">
                 <LoginButton/>
