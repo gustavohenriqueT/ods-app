@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92224b17-b500-41e5-8cc4-1a9196c9f710" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/App/src/assets/arara.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods10.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods11.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods12.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods13.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods14.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods15.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods16.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods17.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods6.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods7.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods8.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/assets/ods9.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/components/Hero/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/components/Hero/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/src/components/utils/ods.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/assets/SDG-1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/assets/ods1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/components/Crown/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/components/Crown/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/components/Header/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/components/Header/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/components/Navbar/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/components/Navbar/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/components/Navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/components/Navbar/index.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="92224b17-b500-41e5-8cc4-1a9196c9f710" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,24 +52,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/luizs/WebstormProjects/ods-app/App/src/assets",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luizs/WebstormProjects/ods-app/App/src/assets&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\luizs\WebstormProjects\ods-app\App\src\assets" />
@@ -158,7 +131,8 @@
       <workItem from="1694993282952" duration="1306000" />
       <workItem from="1695073285667" duration="1067000" />
       <workItem from="1695075015809" duration="132000" />
-      <workItem from="1695492341459" duration="10653000" />
+      <workItem from="1695492341459" duration="11327000" />
+      <workItem from="1695582961101" duration="3000" />
     </task>
     <servers />
   </component>
