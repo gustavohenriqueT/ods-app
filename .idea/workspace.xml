@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92224b17-b500-41e5-8cc4-1a9196c9f710" name="Changes" comment="" />
+    <list default="true" id="92224b17-b500-41e5-8cc4-1a9196c9f710" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/components/Footer/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/components/Footer/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/components/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/components/Footer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/components/Header/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/components/Header/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/components/Hero/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/components/Hero/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/components/Navbar/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/components/Navbar/index.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,6 +140,8 @@
       <workItem from="1695075015809" duration="132000" />
       <workItem from="1695492341459" duration="11327000" />
       <workItem from="1695582961101" duration="3000" />
+      <workItem from="1695588298264" duration="2513000" />
+      <workItem from="1695591760817" duration="4063000" />
     </task>
     <servers />
   </component>
