@@ -1,20 +1,10 @@
-import { useState } from "react"
+import Comment from "../../components/Comentario"
 import Footer from "../../components/Footer"
 import './style.css'
 function Dados() {
-    function handleSignupForm(event) {
-        event.preventDefault()
-        console.log('Voce Enviou')
-    } 
     return (
        <>
-       <div>
-        <form className="form" onSubmit={handleSignupForm}>
-            <h1>Comente</h1>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Faça um Comentário..."></textarea>
-            <button type="submit"> Enviar</button>
-        </form>
-       </div>
+        <Comment/>
        <Footer/>
        </>
     )
