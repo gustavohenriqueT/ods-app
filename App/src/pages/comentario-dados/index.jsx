@@ -1,7 +1,9 @@
+import { useState } from "react"
 import Footer from "../../components/Footer"
 import './style.css'
 function Dados() {
-    function handleSignupForm() {
+    function handleSignupForm(event) {
+        event.preventDefault()
         console.log('Voce Enviou')
     } 
     return (
