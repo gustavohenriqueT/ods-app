@@ -1,6 +1,6 @@
 // src/components/CommentList.jsx
 import { useState } from 'react';
-
+import style from '../../pages/comentario-dados'
 export default function Comment() {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
@@ -22,6 +22,7 @@ export default function Comment() {
       </ul>
       <div>
         <textarea
+        className='textarea'
           rows="4"
           cols="50"
           placeholder="Digite seu comentário..."

@@ -1,5 +1,6 @@
-import React from 'react'
-import {FiLogIn} from 'react-icons/fi'
+import React from 'react';
+import {FiLogIn} from 'react-icons/fi';
+
 const loginButton = () =>{
     return (
         <a href="#" style={{textDecoration:"none", color:'#010101', position:'relative'}}>
