@@ -2,8 +2,8 @@ import React from 'react'
 import './index.css'
 const Explanation = () =>{
     return (
-        <section>
-            <div>
+        <section className="explanation">
+            <div className='explanation_start'> {/* */}
                 <h2>O que são os Objetivos de Desenvolvimento Sustentável (ODS) no Brasil?</h2>
                 <p>
                     Os Objetivos de Desenvolvimento Sustentável (ODS) da ONU são uma série de metas globais que foram adotadas pelos Estados-membros das Nações Unidas em setembro de 2015 como parte da Agenda 2030 para o Desenvolvimento Sustentável. Esses objetivos foram estabelecidos para abordar uma variedade de desafios globais, incluindo pobreza, desigualdade, mudanças climáticas, degradação ambiental, paz e justiça, saúde, educação e bem-estar.
