@@ -38,11 +38,13 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: #fdcaa7d7;
-    padding: 1rem;
 }
 
 .form-image img {
-    width: 31rem;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    object-fit: contain;
 }
 
 .form {
@@ -134,7 +136,7 @@ h1 {
 .input-box label,
 .gender-title h6 {
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: bold;
     color: #000000c0;
 }
 
