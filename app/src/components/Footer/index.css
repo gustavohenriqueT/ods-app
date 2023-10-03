@@ -1,0 +1,51 @@
+footer{
+ 
+  height: 35vh;
+  width: 100vw;
+  padding: 64px;
+  color: #f5f5f5;
+  background-color: #232323;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer h4{
+  font-weight: 700;
+  font-size: 18px;
+}
+li a{
+  font-weight: 400;
+  text-decoration: none;
+  color: #cccccc;
+  transition: 0.2s ease-in;
+}
+footer a:hover{
+  transform: scale(1.05);
+  color: #f6f6f6;
+}
+.footer_website p {
+  font-weight: 500;
+  margin-top: 8px;
+  width: 75%;
+}
+.footer_divider{
+  margin-right: 32px;
+}
+.footer_list{
+  padding: 16px 0 0 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.footer_list li{
+  width: 100%;
+}
+.footer_socials{
+  margin:16px 0 0 8px;
+  display: flex;
+  gap: 16px;
+}
+.footer_socials svg{
+  width: 28px;
+  height: 28px;
+}

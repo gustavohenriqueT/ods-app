@@ -1,0 +1,19 @@
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav li{
+    width: 110px;
+    height: 110px;
+    transition: transform 0.05s ease-in;
+}
+nav li:hover{
+    transform: scale(1.08);
+}
+nav a{
+    color: #1e1e1e;
+}
+nav img{
+    width: 100%;
+    height: 100%;
+}
