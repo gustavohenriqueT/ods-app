@@ -10,6 +10,7 @@
     font-weight: 700;
     font-size: 28px; 
     margin-bottom: 18px;
+    color: rgb(25, 25, 25);
 }
 .explanation h3{
     text-align: center;
@@ -36,7 +37,7 @@
 }
 .explanation li{
     
-    margin: 12px 0 12px 0;
+    margin: 12px 0 22px 0;
 }
 .explanation li p {
     line-height: 1.5;
