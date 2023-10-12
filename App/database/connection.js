@@ -1,11 +1,12 @@
-const sequelize = require('sequelize');
+const Sequelize = require('sequelize');
 
-const conn = new sequelize(
+const sequelize = new Sequelize(
     'db_projeto', 'root', 'root',
     {
-        host : "localhost",
-        dialect : "mysql"
+        host : 'localhost',
+        dialect : 'mysql',
+        port: 5173
     }
 );
 
-module.exports = conn;
+module.exports = sequelize;
