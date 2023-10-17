@@ -10,7 +10,6 @@ const App = () =>(
     <>
         <Header/>
         <Hero/>
-        <Stats/>
         <Explanation/>
         <Voting/>
         <Register/>
