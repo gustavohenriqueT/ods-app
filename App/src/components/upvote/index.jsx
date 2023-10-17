@@ -1,4 +1,7 @@
 import React, {useState} from "react";
+import {FiArrowUpCircle, FiArrowDownCircle} from 'react-icons/fi';
+
+import "./style.css"
 
 function VoteButton() {
   const [votes, setVotes] = useState(0);
@@ -12,10 +15,10 @@ function VoteButton() {
   };
 
   return (
-    <div>
-      <button onClick={handleUpVote}>Up</button>
-      <button onClick={handleDownVote}>Down</button>
+    <div className="vote">
+      <button className="up" onClick={handleUpVote}><FiArrowUpCircle/></button>
       <p> Votes: {votes}</p>
+      <button className="down" onClick={handleDownVote}><FiArrowDownCircle/></button>
     </div>
   );
 

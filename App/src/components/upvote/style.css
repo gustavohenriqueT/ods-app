@@ -1,0 +1,15 @@
+.vote {
+    display: flex;
+}
+
+.up {
+    margin-right: 5px;
+    margin: 5px;
+    
+}
+
+.down{
+    margin-left: 5px;
+    margin: 5px;
+    
+}

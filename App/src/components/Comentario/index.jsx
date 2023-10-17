@@ -1,6 +1,7 @@
 // src/components/CommentList.jsx
 import { useState } from 'react';
 import '../../pages/comentario-dados'
+import VoteButton from '../upvote';
 export default function Comment() {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
@@ -17,7 +18,7 @@ export default function Comment() {
       <h2 className='h2'>Comentários</h2>
       <ul className='ul'>
         {comments.map((comment, index) => (
-          <li key={index}>{comment}</li>
+          <li key={index}>{comment} <VoteButton/></li>
         ))}
       </ul>
       <div className='divTextArea'>
