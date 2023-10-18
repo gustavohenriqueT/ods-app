@@ -4,6 +4,8 @@ import LoginButton from "../buttons/loginButton";
 import RegisterButton from "../buttons/registerButton";
 import DadosButton from "../buttons/dadosButton";
 import ChatButton from "../buttons/chatButton";
+import HomeButton from "../buttons/homeButton";
+
 
 const Crown = () =>{
     //if user logged: remove login/register -> add userButton
@@ -13,6 +15,7 @@ const Crown = () =>{
                 <div style={{width:"200px",height:"32px", backgroundColor:"lightgreen"}}/>
             </div>
             <div className="crown_account">
+                <HomeButton/>
                 <ChatButton/>
                 <DadosButton/>
                 <LoginButton/>

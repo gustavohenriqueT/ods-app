@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import '../../pages/comentario-dados'
 import VoteButton from '../upvote';
+
+
 export default function Comment() {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');

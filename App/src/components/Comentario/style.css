@@ -4,13 +4,12 @@
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
-    border-radius: 4px;
+    border-radius: 30px;
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
     display: flex;
-    
-
+    margin-top: 5px;
 }
 
 
@@ -43,12 +42,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 5px;
 }
 
 .button {
-    width: 8%;
-    height: 30px;
-    border-radius: 10px;
+    width:10%;
+    height: 35px;
+    border-radius: 20px;
     background-color: rgba(12, 99, 231, 0.527);
     border: 0;
 
