@@ -1,20 +1,14 @@
-import Explanation from "../../components/Explanation";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import Hero from "../../components/Hero";
-import Reason from "../../components/Reason";
-import Register from "../../components/Register";
-import Stats from "../../components/Stats";
+import Explanation from "../../components/Explanation";
 import Voting from "../../components/Voting";
+import Register from "../../components/Register";
+import Footer from "../../components/Footer";
 
 function Home () {
     return (
         <>
         <Header/>
-        <Hero/>
-        <Stats/>
         <Explanation/>
-        <Reason/>
         <Voting/>
         <Register/>
         <Footer/>
