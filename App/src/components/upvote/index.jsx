@@ -16,9 +16,9 @@ function VoteButton() {
 
   return (
     <div className="vote">
-      <button className="up" onClick={handleUpVote}><FiArrowUpCircle/></button>
+      <button className="up" onClick={handleUpVote}><FiArrowUpCircle className="Fiup"/></button>
       <p> Votes: {votes}</p>
-      <button className="down" onClick={handleDownVote}><FiArrowDownCircle/></button>
+      <button className="down" onClick={handleDownVote}><FiArrowDownCircle className="Fidown"/></button>
     </div>
   );
 

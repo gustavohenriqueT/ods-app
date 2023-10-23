@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import '../../pages/comentario-dados'
 import VoteButton from '../upvote';
+import './style.css'
 
 
 export default function Comment() {

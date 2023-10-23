@@ -5,6 +5,8 @@
 .up {
     margin-right: 5px;
     margin: 5px;
+    border: 0;
+    box-shadow: none 0;
     
 }
 
@@ -13,3 +15,5 @@
     margin: 5px;
     
 }
+
+
