@@ -1,7 +1,6 @@
-const Sequelize = require('sequelize');
-const database = require('../database/connection'); 
+const { Sequelize, sequelize } = require('../database/connection');
 
-const Log = conn.define('log',
+const Log = sequelize.define('log',
     {
       idlog : {
           type: Sequelize.INTEGER,
@@ -11,10 +10,10 @@ const Log = conn.define('log',
       },
       idusuario: Sequelize.INTEGER,
       idmensagem: Sequelize.INTEGER,
-      voto_mensagem: Sequelize.INTEGER,
+      voto_mensagem: Sequelize.BOOLEAN,
       id_meta_ods: Sequelize.INTEGER,
       idvoto_meta_ods: Sequelize.INTEGER,
-      voto_ods: Sequelize.INTEGER
+      voto_ods: Sequelize.BOOLEAN
     }
 );
 

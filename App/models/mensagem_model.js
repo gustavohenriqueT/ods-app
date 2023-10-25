@@ -1,7 +1,6 @@
-const Sequelize = require('sequelize');
-const database = require('../database/connection'); 
+const { Sequelize, sequelize } = require('../database/connection');
 
-const Mensagem = conn.define('mensagem',
+const Mensagem = sequelize.define('mensagem',
   {
     idmensagem: {
       type: Sequelize.INTEGER,
