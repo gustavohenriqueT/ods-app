@@ -1,7 +1,6 @@
 .hero{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 480px;
   width: 100vw;
   padding: 32px;
 }
@@ -11,9 +10,9 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, #83e718, #1c7be8);
+  background-image: linear-gradient(to right, #41cc02, #1261e8);
   font-size: 16px;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.3)
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.2)
 }
 .hero_title{
   margin-top: 24px;
@@ -34,7 +33,15 @@
 }
 .hero_image img{
   height: auto;
-  width: 400px;
+  width: 75%;
+  max-width: 400px;
   border-radius: 20px;
   object-fit: contain;
+}
+@media screen and (max-width: 960px){
+  .hero{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 }

@@ -10,8 +10,8 @@ const App = () =>(
         <Header/>
         <Hero/>
         <Explanation/>
-        <Voting/>
-        <Register/>
+        {/*<Voting/>*/}
+        {/*<Register/>*/}
         <Footer/>
     </>
 );

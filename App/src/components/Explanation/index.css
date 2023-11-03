@@ -1,5 +1,5 @@
 .explanation{
-    
+    padding: 0 36px 0 36px;
 }
 .explanation_start{
     max-width: 640px;
@@ -12,15 +12,25 @@
     margin-bottom: 18px;
     color: rgb(25, 25, 25);
 }
+.explanation details{
+    border: 1px solid #e7e7e7;
+    padding: 10px;
+    border-radius: 5px;
+}
 .explanation h3{
     text-align: center;
     font-weight: 700;
-    font-size: 24px; 
+    font-size: 22px;
     color: rgb(25, 25, 25);
-    margin: 22px 0 8px 0;
+}
+.explanation summary{
+    font-weight: 700;
+    font-size: 22px;
+    color: rgb(25, 25, 25);
+    cursor: pointer;
+    padding: 5px;
 }
 .explanation h4{
-    text-align: center;
     font-weight: 700;
     font-size: 20px; 
     color: rgb(25, 25, 25);
@@ -31,21 +41,77 @@
     color: rgb(40, 40, 40);
     font-size: 16px;
 }
-.explanation ol{
+.explanation-list{
     margin: 24px 0 12px 0;
-    padding: 0 48px 0 48px;
+    padding: 0 16px 0 16px;
 }
-.explanation li{
-    
-    margin: 12px 0 22px 0;
+.explanation-list li{
+    margin: 8px 0 16px 0;
 }
-.explanation li p {
+.explanation-list li p {
+    text-indent: 28px;
     line-height: 1.5;
     font-weight: 500;
     color: rgb(40, 40, 40);
     font-size: 14px;
 }
 .reason{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding: 32px;
+    align-items: center;
+    justify-items: center;
+}
+.reason img {
+    height: auto;
+    width: 75%;
+    max-width: 440px;
+    border-radius: 20px;
+    object-fit: contain;
+}
+.reason .text-container{
+    padding: 0 36px 0 36px;
     max-width: 640px;
-    margin: 0 auto 0 auto;
+}
+.reason .text-container h2{
+    display: inline-block;
+    font-weight: 700;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #41cc02, #1261e8);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.2)
+}
+.reason .text-container li{
+    margin: 12px 0 24px 0;
+}
+.reason .text-container li p {
+    line-height: 1.5;
+    font-weight: 500;
+    color: rgb(40, 40, 40);
+    font-size: 18px;
+}
+@media screen and (max-width: 960px){
+    .explanation{
+        padding: 0 12px 0 12px;
+    }
+    .reason .text-container{
+        padding: 0;
+    }
+    .reason{
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 16px;
+    }
+}
+@media screen and (min-width: 1080px){
+    .reason{
+        padding:32px 48px 32px 48px;
+    }
+    .explanation-list li p {
+        font-size: 16px;
+    }
 }
