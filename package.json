@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mysql2": "^3.6.1",
-    "react-router-dom": "^6.16.0"
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.2",
+    "react-router-dom": "^6.16.0",
+    "sequelize": "^6.33.0"
   }
 }
