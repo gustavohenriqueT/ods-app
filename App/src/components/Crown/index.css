@@ -1,0 +1,17 @@
+.crown{
+  height: 80px;
+  padding: 8px;
+  display: flex;
+  width: 100%;
+}
+.crown_logo{
+  padding-left: 12px;
+  width: 30%;
+}
+.crown_account{
+  width: 70%;
+  display: flex;
+  justify-content: right;
+  gap: 32px;
+  align-items: center;
+}
