@@ -1,6 +1,7 @@
 import "./index.css";
 import LoginButton from "../buttons/loginButton.jsx";
 import Arara from "../../assets/arara.png";
+
 const Hero = ({ username }) => {
   return (
     <section className="hero">

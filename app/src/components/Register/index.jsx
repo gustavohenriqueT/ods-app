@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./index.css";
 import imagem from "./13456.jpg";
+import "./index.css";
 
 function Login() {
   const nagivate = useNavigate();
