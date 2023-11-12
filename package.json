@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mysql2": "^3.6.1"
+    "mysql2": "^3.6.1",
+    "react-router-dom": "^6.16.0"
   }
 }
