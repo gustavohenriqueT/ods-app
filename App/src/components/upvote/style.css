@@ -1,0 +1,19 @@
+.vote {
+    display: flex;
+}
+
+.up {
+    margin-right: 5px;
+    margin: 5px;
+    border: 0;
+    box-shadow: none 0;
+    
+}
+
+.down{
+    margin-left: 5px;
+    margin: 5px;
+    
+}
+
+

@@ -19,6 +19,8 @@ const Crown = ({ username }) => {
         />
       </div>
       <div className="crown_account">
+        <HomeButton />
+        <ChatButton />
         <DadosButton />
         {username === "" ? <LoginButton /> : <p>Bem-vindo, {username}!</p>}
         {username !== "" && <LogoutButton />}

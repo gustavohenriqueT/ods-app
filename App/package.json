@@ -2,18 +2,24 @@
   "name": "x",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server_api": "node database/database.js"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
-    "react-router-dom": "^6.19.0"
+    "react-router-dom": "^6.19.0",
+    "sequelize": "^6.33.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

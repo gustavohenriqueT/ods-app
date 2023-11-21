@@ -1,28 +1,33 @@
 // src/components/CommentList.jsx
-import { useState } from 'react';
-import '../../pages/comentario-dados'
+import { useState } from "react";
+import "../../pages/comentario-dados";
+import VoteButton from "../upvote";
+import "./style.css";
+
 export default function Comment() {
   const [comments, setComments] = useState([]);
-  const [newComment, setNewComment] = useState('');
+  const [newComment, setNewComment] = useState("");
 
   const handleCommentSubmit = () => {
-    if (newComment.trim() !== '') {
+    if (newComment.trim() !== "") {
       setComments([...comments, newComment]);
-      setNewComment('');
+      setNewComment("");
     }
   };
 
   return (
     <div>
-      <h2 className='h2'>Comentários</h2>
-      <ul className='ul'>
+      <h2 className="h2">Comentários</h2>
+      <ul className="ul">
         {comments.map((comment, index) => (
-          <li key={index}>{comment}</li>
+          <li key={index}>
+            {comment} <VoteButton />
+          </li>
         ))}
       </ul>
-      <div className='divTextArea'>
+      <div className="divTextArea">
         <textarea
-          className='textarea'
+          className="textarea"
           rows="4"
           cols="50"
           placeholder="Digite seu comentário..."
@@ -30,9 +35,10 @@ export default function Comment() {
           onChange={(e) => setNewComment(e.target.value)}
         ></textarea>
         <br />
-        <button className='button' onClick={handleCommentSubmit}>Enviar Comentário</button>
+        <button className="button" onClick={handleCommentSubmit}>
+          Enviar Comentário
+        </button>
       </div>
     </div>
   );
 }
-
