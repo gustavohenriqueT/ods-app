@@ -4,6 +4,8 @@ import LoginButton from "../buttons/loginButton";
 import RegisterButton from "../buttons/registerButton";
 import DadosButton from "../buttons/dadosButton";
 import LogoutButton from "../buttons/logoutButton";
+import HomeButton from "../buttons/homeButton";
+import ChatButton from "../buttons/chatButton";
 
 const Crown = ({ username }) => {
   //if user logged: remove login/register -> add userButton
