@@ -1,4 +1,5 @@
 // app.js
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const logController = require("./controllers/logController"); // Ajuste o caminho conforme necessário
@@ -10,7 +11,6 @@ const votoMetaOdsController = require("./controllers/votoMetaOdsController"); //
 
 const app = express();
 const port = 3007;
-
 // Middleware para análise de corpo JSON
 app.use(bodyParser.json());
 
