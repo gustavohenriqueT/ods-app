@@ -20,7 +20,7 @@ const Crown = ({ username }) => {
           }}
         />
       </div>
-      <div className="crown_account">
+      <div className="crown_account" style={{marginRight:"48px"}}>
         <HomeButton />
         <ChatButton />
         <DadosButton />

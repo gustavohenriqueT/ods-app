@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dados from "./pages/comentario-dados";
 import Home from "./pages/Home/Home";
-import Login from "./components/Register/index";
+import Login from "./components/Login/index";
 
 function AppRoutes() {
   return (

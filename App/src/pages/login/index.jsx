@@ -1,14 +1,13 @@
-import Login from "../../components/Register";
+import Login from "../../components/Login";
 import React from "react";
 import "./index.css";
 
-function Register() {
+function Login() {
   return (
     <>
-      <Register />
       <Login />
     </>
   );
 }
 
-export default Register;
+export default Login;
