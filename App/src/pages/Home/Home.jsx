@@ -6,18 +6,19 @@ import Hero from "../../components/Hero";
 
 function Home() {
   const [dataUser, setDataUser] = useState({
-    username: "",
-    password: "",
+    idUsuario : "",
+    nomeUsuario: "",
+    emailUsuario: "",
   });
   useEffect(() => {
-    const dataUser = localStorage.getItem("teste");
+    const dataUser = localStorage.getItem("User");
     dataUser && setDataUser(JSON.parse(dataUser));
   }, []);
   console.log(dataUser);
   return (
     <>
-      <Header username={dataUser.username} />
-      <Hero username={dataUser.username} />
+      <Header nomeUsuario={dataUser.nomeUsuario} />
+      <Hero nomeUsuario={dataUser.nomeUsuario} />
       <Explanation />
       <Footer />
     </>

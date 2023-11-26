@@ -10,7 +10,7 @@ function Register() {
         email: '',
         senha: '',
     });
-
+//todo bloquear cadastro mesmo email / logar o usuario automaticamente / mostrar mensagens de erro
     const [alerta, setAlerta] = useState("");
     const [resposta, setResposta] = useState("");
 

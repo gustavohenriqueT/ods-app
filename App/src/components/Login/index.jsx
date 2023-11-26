@@ -1,23 +1,43 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate }  from "react-router-dom";
 import imagem from "./13456.jpg";
 import "./index.css";
 
 function Login() {
-  const nagivate = useNavigate();
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (username === "Vinícius" && password === "123") {
-      localStorage.setItem("teste", JSON.stringify({ username, password }));
-      nagivate("/");
-    } else {
-      setError("Credenciais inválidas. Tente novamente.");
+
+    try {
+      const response = await fetch('http://localhost:3007/loginUser', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, senha}),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const {idUsuario = data.idusuario, nomeUsuario = data.nome, emailUsuario = data.email} = data
+        console.log('Login successful!', data);
+        localStorage.setItem("User", JSON.stringify( {idUsuario, nomeUsuario, emailUsuario}));
+        navigate("/");
+        // Handle successful login, e.g., redirect or set user state
+      } else {
+        console.error('Login failed.');
+        // Handle failed login, e.g., display an error message
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      // Handle other errors, e.g., network issues
     }
   };
+
 
   return (
     <div className="body-login">
@@ -35,26 +55,26 @@ function Login() {
 
             <div className="input-group">
               <div className="input-box">
-                <label htmlFor="username">Usuário</label>
+                <label htmlFor="email">E-mail</label>
                 <input
-                  id="username"
-                  type="text"
-                  name="usuario"
-                  placeholder="Digite seu usuário"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="exemplo@gmail.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
               <div className="input-box">
-                <label htmlFor="password">Senha</label>
+                <label htmlFor="senha">Senha</label>
                 <input
-                  id="password"
-                  type="password"
+                  id="senha"
+                  type="senha"
                   name="senha"
-                  placeholder="Digite sua senha"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Digite sua Senha"
+                  value={senha}
+                  onChange={(e) => setSenha(e.target.value)}
                 />
               </div>
 

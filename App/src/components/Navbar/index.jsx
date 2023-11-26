@@ -87,13 +87,14 @@ const ODS=[
         id:17
     }
 ]
+import {Link} from "react-router-dom"
 
 const Navbar = () =>{
     const listOds = ODS.map(ods =>
         <li key={ods.id} >
-            <a href="#">
+            <Link to={"/ods"+ods.id} style={ods.id >= 2 ? { pointerEvents: 'none' } : {}}>
                 <img src={ods.svg} alt={ods.name}/>
-            </a>
+            </Link>
         </li>
       );
     return (

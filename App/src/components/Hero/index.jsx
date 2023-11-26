@@ -2,7 +2,8 @@ import "./index.css";
 import LoginButton from "../buttons/loginButton.jsx";
 import Arara from "../../assets/arara.png";
 
-const Hero = ({ username }) => {
+const Hero = ({ nomeUsuario }) => {
+
   return (
     <section className="hero">
       <div className="hero_text">
@@ -18,7 +19,7 @@ const Hero = ({ username }) => {
             Nós, imparcialmente e sem viés, centralizamos dados de fontes
             confiáveis para você tomar suas próprias conclusões
           </p>
-          {username === "" && <LoginButton />}
+          {nomeUsuario === "" && <LoginButton />}
         </div>
       </div>
       <div className="hero_image">

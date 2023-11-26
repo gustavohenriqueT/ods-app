@@ -20,6 +20,18 @@ async function createUser(req, res) {
     res.status(500).json({ mensagem: "Erro interno do servidor" });
   }
 }
+async function loginUser(req, res) {
+  const {email, senha} = req.body;
+  try {
+     const user = await User.findOne({
+      where: {email: email, senha: senha},
+    });
+     res.status(200).json(user)
+  } catch (error) {
+    console.error('Error fetching user by email:', error);
+    res.status(500).json({ mensagem: "Erro interno do servidor" })
+  }
+}
 
 async function getUsers(req, res) {
   try {
@@ -33,5 +45,6 @@ async function getUsers(req, res) {
 
 module.exports = {
   createUser,
+  loginUser,
   getUsers,
 };

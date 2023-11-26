@@ -28,7 +28,6 @@ const Mensagem = sequelize.define(
       primaryKey: true,
     },
     mensagem: DataTypes.STRING,
-    date_time: DataTypes.DATE,
     idusuario: {
       type: DataTypes.INTEGER,
       allowNull: false,

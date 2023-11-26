@@ -24,7 +24,8 @@ app.get("/logs", logController.getLogs);
 
 // Rota para cadastrar um user
 app.post("/user", userController.createUser);
-
+// Rota para obter todos os users
+app.post("/loginUser", userController.loginUser);
 // Rota para obter todos os users
 app.get("/users", userController.getUsers);
 
@@ -34,10 +35,10 @@ app.post("/mensagens", mensagemController.createMensagem);
 // Rota para obter todas as mensagens
 app.get("/mensagens", mensagemController.getMensagens);
 
-// Rota para cadastrar uma ods
+// Rota para cadastrar uma ods1
 app.post("/ods", odsController.createOds);
 
-// Rota para obter todas as ods
+// Rota para obter todas as ods1
 app.get("/ods", odsController.getOdss);
 
 // Rota para cadastrar um voto da mensagem
@@ -46,10 +47,10 @@ app.post("/votoMensagem", votoMensagemController.createVotoMensagem);
 // Rota para obter todas os votos das mensagens
 app.get("/votoMensagem", votoMensagemController.getVotoMensagens);
 
-// Rota para cadastrar um voto da ods
+// Rota para cadastrar um voto da ods1
 app.post("/votoMetaOds", votoMetaOdsController.createVotoMetaOds);
 
-// Rota para obter todas os votos das ods
+// Rota para obter todas os votos das ods1
 app.get("/votoMetaOds", votoMetaOdsController.getVotoMetaOdss);
 
 // Iniciar o servidor

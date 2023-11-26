@@ -10,7 +10,12 @@ const sequelize = new Sequelize("db_projeto", "root", "sysadm", {
         console.log('Connection has been established successfully.');
 
         // Sync the database
-        await sequelize.sync({ force: true });
+        await sequelize.sync({ force: true })
+        .then(()=>{
+            return Ods.bulkCreate([
+                {nome_ods: 'Erradicação da Pobreza', descricao:'Erradicação da Pobreza'}
+            ]);
+        });
 
         // Your application logic here
 

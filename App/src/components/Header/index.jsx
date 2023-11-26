@@ -3,10 +3,11 @@ import Crown from "../Crown";
 import Navbar from "../Navbar";
 import "./index.css";
 
-const Header = ({ username }) => {
+const Header = ({ nomeUsuario }) => {
+
   return (
     <>
-      <Crown username={username} />
+      <Crown nomeUsuario={nomeUsuario} />
       <Navbar />
     </>
   );

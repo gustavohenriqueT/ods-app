@@ -18,6 +18,7 @@ const sequelize = new Sequelize("db_projeto", "root", "sysadm", {
         console.error('Unable to connect to the database:', error);
     }
 })();
+
 const User = sequelize.define(
   "User",
   {
@@ -28,8 +29,11 @@ const User = sequelize.define(
       primaryKey: true,
     },
     nome: DataTypes.STRING,
-    sobrenome: DataTypes.STRING,
-    email: DataTypes.STRING,
+    email:{
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+    },
     senha: DataTypes.STRING,
   },
   {

@@ -2,13 +2,13 @@
 const { Mensagem } = require("../models/mensagem_model"); // Ajuste o caminho conforme necessário
 
 async function createMensagem(req, res) {
-  const { mensagem, date_time, idusuario } = req.body;
+  console.log(req.body)
+  const { idusuario, mensagem} = req.body;
 
   try {
     // Criação da mensagem no banco de dados
     const newMensagem = await Mensagem.create({
       mensagem,
-      date_time,
       idusuario,
     });
 

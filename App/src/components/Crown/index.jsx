@@ -7,26 +7,20 @@ import LogoutButton from "../buttons/logoutButton";
 import HomeButton from "../buttons/homeButton";
 import ChatButton from "../buttons/chatButton";
 
-const Crown = ({ username }) => {
+const Crown = ({ nomeUsuario }) => {
   //if user logged: remove login/register -> add userButton
   return (
     <div className="crown">
       <div className="crown_logo">
-        <div
-          style={{
-            height: "32px",
-            width: "200px",
-            backgroundColor: "lightgreen",
-          }}
-        />
+          <HomeButton />
       </div>
-      <div className="crown_account" style={{marginRight:"48px"}}>
-        <HomeButton />
+      <div className="crown_account" style={{paddingRight:"48px"}}>
+
         <ChatButton />
         <DadosButton />
-        {username === "" ? <LoginButton /> : <p>Bem-vindo, {username}!</p>}
-        {username !== "" && <LogoutButton />}
-        {username === "" && <RegisterButton />}
+        {nomeUsuario === "" ? <LoginButton /> : <p>Bem-vindo, {nomeUsuario}!</p>}
+        {nomeUsuario !== "" && <LogoutButton />}
+        {nomeUsuario === "" && <RegisterButton />}
       </div>
     </div>
   );
