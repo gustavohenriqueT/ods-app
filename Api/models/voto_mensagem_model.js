@@ -1,8 +1,8 @@
-const { Sequelize, DataTypes } = require("sequelize");
+const {Sequelize, DataTypes} = require("sequelize");
 
 const sequelize = new Sequelize("db_projeto", "root", "sysadm", {
-  host: "localhost",
-  dialect: "mysql",
+    host: "localhost",
+    dialect: "mysql",
 });
 (async () => {
     try {
@@ -10,7 +10,7 @@ const sequelize = new Sequelize("db_projeto", "root", "sysadm", {
         console.log('Connection has been established successfully.');
 
         // Sync the database
-        await sequelize.sync({ force: true });
+        await sequelize.sync({force: true});
 
         // Your application logic here
 
@@ -19,30 +19,30 @@ const sequelize = new Sequelize("db_projeto", "root", "sysadm", {
     }
 })();
 const VotoMensagem = sequelize.define(
-  "votoMensagem",
-  {
-    idvoto_mensagem: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      allowNull: false,
-      primaryKey: true,
+    "votoMensagem",
+    {
+        idvoto_mensagem: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            allowNull: false,
+            primaryKey: true,
+        },
+        idusuario: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        idmensagem: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        voto_mensagem: DataTypes.BOOLEAN,
     },
-    idusuario: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    idmensagem: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    voto_mensagem: DataTypes.BOOLEAN,
-  },
-  {
-    tableName: "voto_mensagem", // Substitua pelo nome real da sua tabela
-    timestamps: true, // Se a tabela não possui colunas createdAt e updatedAt
-  }
+    {
+        tableName: "voto_mensagem", // Substitua pelo nome real da sua tabela
+        timestamps: true, // Se a tabela não possui colunas createdAt e updatedAt
+    }
 );
 
 module.exports = {
-  VotoMensagem,
+    VotoMensagem,
 };

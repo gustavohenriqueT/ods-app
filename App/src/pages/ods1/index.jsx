@@ -27,9 +27,9 @@ function ods1() {
                         mulheres e meninas. Contudo, a erradicação da pobreza extrema em todas as suas formas é o
                         maior desafio global para ser atingido o desenvolvimento sustentável.
                     </p>
-                    <p>
-                        São metas do ODS 1:
-                    </p>
+                    <h3>
+                        Suas Metas
+                    </h3>
                     <ul>
                         <li>1.1 Até 2030, erradicar a pobreza extrema para todas as pessoas em todos os lugares,
                             atualmente medida como pessoas vivendo com menos de US$ 1,25 por dia.
@@ -51,13 +51,13 @@ function ods1() {
                             e reduzir a exposição e vulnerabilidade destes a eventos extremos relacionados com o clima e
                             outros choques e desastres econômicos, sociais e ambientais.
                         </li>
-                        <li>1.a Garantir uma mobilização significativa de recursos a partir de uma variedade de fontes,
+                        <li>1.6 Garantir uma mobilização significativa de recursos a partir de uma variedade de fontes,
                             inclusive por meio do reforço da cooperação para o desenvolvimento, de forma a proporcionar
                             meios adequados e previsíveis para que os países em desenvolvimento, em particular os países
                             de menor desenvolvimento relativo, implementem programas e políticas para acabar com a
                             pobreza em todas as suas dimensões.
                         </li>
-                        <li>1.b Criar marcos políticos sólidos, em níveis nacional, regional e internacional, com base
+                        <li>1.7 Criar marcos políticos sólidos, em níveis nacional, regional e internacional, com base
                             em estratégias de desenvolvimento a favor dos pobres e sensíveis a gênero, para apoiar
                             investimentos acelerados nas ações de erradicação da pobreza.
                         </li>
@@ -65,7 +65,7 @@ function ods1() {
                 </div>
 
                 <div>
-                    <h2>Ações do TRT/CE relacionadas ao ODS 1</h2>
+                    <h2>Ações do TRT/CE relacionadas</h2>
                     <p>
                         A coordenadora do Núcleo de Responsabilidade Socioambiental do TRT/CE (Ecosétima), Silvana
                         Dias, destaca atividades desenvolvidas no âmbito da Justiça do Trabalho do Ceará que visam à
@@ -98,40 +98,9 @@ function ods1() {
                 </div>
 
                 <div>
-                    <h2>A erradicação da pobreza é um objetivo ambicioso e crucial...</h2>
-                    <p>
-                        Sobre a ODS 1: Erradicação da Pobreza:
-                    </p>
-                    <p>
-                        Definição: A meta é acabar com a pobreza em todas as suas formas, em todos os lugares. Isso
-                        inclui pessoas vivendo com menos de US$ 1,90 por dia, promovendo a proteção social, garantindo
-                        o acesso a serviços básicos e oportunidades econômicas.
-                    </p>
-                    <p>
-                        Abordagem Multidimensional: A ODS 1 reconhece que a pobreza não é apenas uma questão de
-                        renda, mas também está relacionada à falta de acesso à educação, saúde, água potável, saneamento
-                        básico e outros direitos fundamentais.
-                    </p>
-                    <p>
-                        Contexto Global: A erradicação da pobreza é um desafio global, afetando países desenvolvidos e
-                        em desenvolvimento. A cooperação internacional é essencial para alcançar resultados
-                        significativos.
-                    </p>
-                    <p>
-                        Curiosidades:
-                    </p>
-                    <ul>
-                        <li>Dados Atuais: Antes da pandemia de COVID-19, estimava-se que mais de 9% da população mundial
-                            vivia em extrema pobreza. A pandemia exacerbou essa situação.
-                        </li>
-                        <li>Sucessos Notáveis: Alguns países alcançaram sucesso notável na redução da pobreza,
-                            implementando estratégias eficazes de desenvolvimento econômico, investindo em educação e
-                            saúde, e promovendo a igualdade.
-                        </li>
-                    </ul>
-                    <p>
+                    <h2>
                         Soluções:
-                    </p>
+                    </h2>
                     <ul>
                         <li>Inclusão Financeira: Facilitar o acesso a serviços financeiros pode capacitar as pessoas
                             economicamente, permitindo-lhes investir em suas vidas e comunidades.
@@ -144,13 +113,25 @@ function ods1() {
                             erradicação da pobreza a longo prazo.
                         </li>
                     </ul>
+                    <h2>
+                        Diversos
+                    </h2>
+                    <ul>
+                        <li>Dados Atuais: Antes da pandemia de COVID-19, estimava-se que mais de 9% da população mundial
+                            vivia em extrema pobreza. A pandemia exacerbou essa situação.
+                        </li>
+                        <li>Sucessos Notáveis: Alguns países alcançaram sucesso notável na redução da pobreza,
+                            implementando estratégias eficazes de desenvolvimento econômico, investindo em educação e
+                            saúde, e promovendo a igualdade.
+                        </li>
+                    </ul>
                     <p>
                         Lembre-se, a erradicação da pobreza é um esforço contínuo que exige colaboração global,
                         comprometimento político e ação coletiva.
                     </p>
                 </div>
             </div>
-            {localStorage.getItem("User")?<Comment/>:<p>Faça login para ver o comentários</p>}
+            {localStorage.getItem("User")?<Comment idusuario={dataUser.idUsuario}/>:<p style={{textAlign:"center", color:"darkred"}}>Faça login para ver o comentários</p>}
             <Footer/>
         </>
     );

@@ -1,11 +1,11 @@
-.divTextArea {
+.comments .divTextArea {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 5px;
 }
-.divTextArea .textarea {
+.comments .divTextArea .textarea {
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -40,9 +40,14 @@
    margin-left: auto;
    margin-right: auto;
    line-height: 2;
-
+    gap: 26px;
 }
-.button {
+.comments  ul li h5 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.comments .button {
     font-weight: 700;
     margin: 16px 0 24px;
     cursor: pointer;

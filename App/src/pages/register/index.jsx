@@ -3,14 +3,15 @@ import "./index.css";
 import tucano from "../../assets/2687.jpg"
 import {useState, useEffect} from "react";
 import axios from "axios"
-
+import {Link, useNavigate} from "react-router-dom";
+import {FiLogIn} from "react-icons/fi";
 function Register() {
+    const navigate = useNavigate()
     const [dados, setDados] = useState({
         nome: '',
         email: '',
         senha: '',
     });
-//todo bloquear cadastro mesmo email / logar o usuario automaticamente / mostrar mensagens de erro
     const [alerta, setAlerta] = useState("");
     const [resposta, setResposta] = useState("");
 
@@ -27,19 +28,11 @@ function Register() {
                 'Content-Type' : 'application/json'
             }
         }
-        await axios.post("http://localhost:3007/user", dados, header)
-            .then((res)=>{
-                setResposta(res.data.message);
-                setAlerta("success");
-            })
-            .catch((err)=>{
-                setAlerta("danger");
-                if(err.response){
-                    setResposta(err.response.data.message);
-                } else {
-                    setResposta("Erro: Tente mais tarde!");
-                }
-            });
+        const responseRegister = await axios.post("http://localhost:3007/user", dados, header)
+            if(responseRegister){
+                console.log(responseRegister);
+                navigate("/login");
+            }
 
     }
   return (
@@ -48,7 +41,7 @@ function Register() {
             <div className="form-image">
                 <img src={tucano} style={{mixBlendMode: "multiply", maxWidth: "50vw"}} alt="Tucano"/>
             </div>
-            <div className="form" onSubmit={sendReq}>
+            <div className="form" >
                 <form action="#">
                     <div className="form-header">
                         <div className="title">
@@ -71,12 +64,17 @@ function Register() {
                             </div>
 
                             <div className="login-button">
-                                <button><a href="#">Criar Conta</a></button>
+                                <button onClick={sendReq}>Criar Conta</button>
                             </div>
 
                             <div className="link">
                                 <h3>Já tem uma conta?</h3>
-                                <a href="#">Entrar</a>
+                                <Link
+                                    to="/login"
+                                    style={{ textDecoration: "none", color: "#010101", position: "relative" }}
+                                >
+                                    Entrar
+                                </Link>
                             </div>
                         </div>
                     </div>

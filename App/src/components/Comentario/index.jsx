@@ -5,7 +5,7 @@ import "./style.css";
 import axios from "axios";
 import {useNavigate} from "react-router-dom"
 
-export default function Comment() {
+export default function Comment({idusuario}) {
     const navigate = useNavigate();
     const user = JSON.parse(localStorage.getItem("User"))
     const [newComment, setNewComment] = useState({
@@ -14,6 +14,7 @@ export default function Comment() {
     });
     const [comments, setComments] = useState(() =>[{
         idmensagem: '',
+        usuario:'',
         idusuario: '',
         mensagem:''
     }])
@@ -46,12 +47,13 @@ export default function Comment() {
                     'Content-Type': 'application/json',
                 },
             });
-
             if (response.ok) {
                 const data = await response.json();
+                console.log(data)
                  setComments(() =>
                     data.map(item => ({
                         idmensagem: item.idmensagem,
+                        usuario: item.User.nome,
                         idusuario: item.idusuario,
                         mensagem: item.mensagem,
                     })))
@@ -82,9 +84,9 @@ export default function Comment() {
         <ul>
             {comments.map((comment) => (
             <li key={comment.idmensagem}>
-                <h5>{comment.idusuario}</h5>
+                <h5>{comment.usuario}</h5>
                 <p>{comment.mensagem}</p>
-                <VoteButton idmensagem={comment.idmensagem}/>
+                <VoteButton idmensagem={comment.idmensagem} idusuario={idusuario}/>
             </li>))}
         </ul>
     </div>

@@ -3,25 +3,52 @@ import {FiArrowUpCircle, FiArrowDownCircle} from 'react-icons/fi';
 
 import "./style.css"
 
-function VoteButton({idmensagem}) {
+function VoteButton({idmensagem, idusuario}) {
+     useEffect(()=>{getVotos()},[])
     const [currentVotes, setCurrentVotes] = useState({
         id: 0,
-        total:0
+        total:0,
     });
-    const [votes, setVotes] = useState('');
-    const [initialState] = useState(votes)
     const [hasUpVoted, setHasUpVoted] = useState(false);
     const [hasDownVoted, setHasDownVoted] = useState(false);
-    const handleUpVote = () => {
-        setVotes(initialState + 1);
-        setHasUpVoted(true)
-        setHasDownVoted(false)
+    const handleUpVote = async () => {
+        try {
+            const response = await fetch('http://localhost:3007/VotoMensagem', {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST',
+                body:
+                    JSON.stringify({ idmensagem,idusuario, voto_mensagem:true}),
+            });
+            if (response.ok) {
+                setHasUpVoted(true)
+                setHasDownVoted(false)
+            }
+        } catch (error) {
+            console.error(error);
+        }
+        getVotos()
     };
 
-    const handleDownVote = () => {
-        setVotes(initialState - 1);
-        setHasDownVoted(true)
-        setHasUpVoted(false)
+    const handleDownVote = async () => {
+        try {
+            const response = await fetch('http://localhost:3007/VotoMensagem', {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST',
+                body:
+                    JSON.stringify({ idmensagem,idusuario,voto_mensagem: false}),
+            });
+            if (response.ok) {
+                setHasDownVoted(true)
+                setHasUpVoted(false)
+            }
+        } catch (error) {
+            console.error(error);
+        }
+        getVotos()
     };
     const getVotos = async () => {
         try {
@@ -35,18 +62,17 @@ function VoteButton({idmensagem}) {
             });
             if (response.ok) {
                 const data = await response.json();
-                setCurrentVotes({id: data.idmensagem, total: data.totalvotos})
+                setCurrentVotes({id:data.idmensagem, total: data.totalvotos})
             }
         } catch (error) {
             console.error(error);
         }
     }
-    useEffect(()=>{getVotos()},[])
     return (
         <div className="vote">
             <button className="up" onClick={handleUpVote} disabled={hasUpVoted}><FiArrowUpCircle className="Fiup"/>
             </button>
-            <p style={currentVotes.total >= 0 ? {color: "darkgreen"} : {color: "darkred"}}>{currentVotes.total}</p>
+            <p style={currentVotes.total>= 0 ? {color: "darkgreen"} : {color: "darkred"}}>{currentVotes.total}</p>
             <button className="down" onClick={handleDownVote} disabled={hasDownVoted}><FiArrowDownCircle
                 className="Fidown"/></button>
         </div>

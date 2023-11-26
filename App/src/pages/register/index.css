@@ -174,7 +174,9 @@
     font-weight: 500;
     color: #fff;
 }
-
+.link{
+    text-align: center;
+}
 
 @media screen and (max-width: 1330px) {
     .registerPage .form-image {

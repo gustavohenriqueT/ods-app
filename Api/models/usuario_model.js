@@ -41,7 +41,6 @@ const User = sequelize.define(
     timestamps: true, // Se a tabela não possui colunas createdAt e updatedAt
   }
 );
-
 module.exports = {
   User,
 };

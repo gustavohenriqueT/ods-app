@@ -5,7 +5,6 @@ const Footer = () =>{
     return (
         <footer>
             <div className="footer_website" style={{gridArea:"website"}}>
-                <div style={{width:"60px", height:"60px", backgroundColor:"green", textAlign:"center", borderRadius:"100%"}}>Logo</div>
                 <p>Imparcialmente te mostrando o que realmente importa</p>
             </div>
             <div className="footer_divider" style={{gridArea:"institutional"}}>

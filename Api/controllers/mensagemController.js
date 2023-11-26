@@ -1,5 +1,7 @@
 // controllers/mensagemController.js
-const { Mensagem } = require("../models/mensagem_model"); // Ajuste o caminho conforme necessário
+const { Mensagem } = require("../models/mensagem_model");
+const {Sequelize} = require("sequelize");
+const {User} = require("../models/usuario_model");
 
 async function createMensagem(req, res) {
   console.log(req.body)
@@ -22,7 +24,17 @@ async function createMensagem(req, res) {
 
 async function getMensagens(req, res) {
   try {
-    const mensagens = await Mensagem.findAll();
+    const mensagens = await Mensagem.findAll({
+      attributes: ['idmensagem', 'mensagem', 'idusuario'],
+      include: [{
+        model: User,
+        attributes: ['nome'],
+        required: true, // INNER JOIN
+        on: {
+          idusuario: Sequelize.literal('`Mensagem`.`idusuario` = `User`.`idusuario`'),
+        },
+      }],
+    });
     res.status(200).json(mensagens);
   } catch (err) {
     console.error("Erro ao buscar usuários: " + err.message);
