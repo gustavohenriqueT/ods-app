@@ -45,7 +45,7 @@ app.get("/ods", odsController.getOdss);
 app.post("/votoMensagem", votoMensagemController.createVotoMensagem);
 
 // Rota para obter todas os votos das mensagens
-app.get("/votoMensagem", votoMensagemController.getVotoMensagens);
+app.post("/getVotoMensagem", votoMensagemController.getVotoMensagens);
 
 // Rota para cadastrar um voto da ods1
 app.post("/votoMetaOds", votoMetaOdsController.createVotoMetaOds);

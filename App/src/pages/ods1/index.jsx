@@ -14,7 +14,6 @@ function ods1() {
         const dataUser = localStorage.getItem("User");
         dataUser && setDataUser(JSON.parse(dataUser));
     }, []);
-    console.log(dataUser);
     return (
         <>
             <Header nomeUsuario={dataUser.nomeUsuario}/>
@@ -151,7 +150,7 @@ function ods1() {
                     </p>
                 </div>
             </div>
-            <Comment/>
+            {localStorage.getItem("User")?<Comment/>:<p>Faça login para ver o comentários</p>}
             <Footer/>
         </>
     );

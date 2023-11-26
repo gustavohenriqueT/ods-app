@@ -3,15 +3,15 @@ import {useEffect, useState} from "react";
 import VoteButton from "../upvote";
 import "./style.css";
 import axios from "axios";
-
+import {useNavigate} from "react-router-dom"
 
 export default function Comment() {
+    const navigate = useNavigate();
     const user = JSON.parse(localStorage.getItem("User"))
     const [newComment, setNewComment] = useState({
         idusuario: user.idUsuario,
         mensagem: ''
     });
-    console.log(newComment)
     const [comments, setComments] = useState(() =>[{
         idmensagem: '',
         idusuario: '',
@@ -26,11 +26,8 @@ export default function Comment() {
                         'Content-Type': 'application/json'
                     }
                 }
-                console.log(newComment)
                 const response = await axios.post("http://localhost:3007/mensagens", newComment, header)
-                if(response.ok){
-                    window.location.reload();
-                }
+                window.location.reload();
             }
             catch(err){
                 if(err.response){
@@ -87,7 +84,7 @@ export default function Comment() {
             <li key={comment.idmensagem}>
                 <h5>{comment.idusuario}</h5>
                 <p>{comment.mensagem}</p>
-                <VoteButton/>
+                <VoteButton idmensagem={comment.idmensagem}/>
             </li>))}
         </ul>
     </div>
