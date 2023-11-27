@@ -1,5 +1,5 @@
 import './index.css'
-import {BsGithub, BsLinkedin} from 'react-icons/Bs'
+//import {BsGithub, BsLinkedin} from 'react-icons/Bs'
 import {FaUniversity} from 'react-icons/Fa'
 const Footer = () =>{
     return (
@@ -35,12 +35,12 @@ const Footer = () =>{
             <div className="footer-soc" style={{gridArea:"socials"}}>
                 <h4>Nossas Redes</h4>
                 <ul className="footer_socials">
-                    <li>
-                        <a href="#"><BsGithub/></a>
-                    </li>
-                    <li>
-                        <a href="#"><BsLinkedin/></a>
-                    </li>
+                    {/*<li>*/}
+                    {/*    <a href="#"><BsGithub/></a>*/}
+                    {/*</li>*/}
+                    {/*<li>*/}
+                    {/*    <a href="#"><BsLinkedin/></a>*/}
+                    {/*</li>*/}
                     <li>
                         <a href="#"><FaUniversity/></a>
                     </li>
