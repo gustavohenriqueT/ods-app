@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [react(),ReactRefresh()],
   build: {
     rollupOptions: {
-      external: ['react-icons/all'], // or 'react-icons/Bs' if using a specific icon
+      external: ['react-icons/Bs'], // or 'react-icons/Bs' if using a specific icon
     },
   },
 });
