@@ -1,5 +1,6 @@
 // app.js
 const cors = require("cors")
+const path = require('path');
 const express = require("express");
 
 const bodyParser = require("body-parser");
@@ -15,6 +16,11 @@ const port = 3007;
 app.use(cors())
 // Middleware para análise de corpo JSON
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'App/dist/')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'App/dist/', 'index.html'));
+});
 
 // Rota para cadastrar um log
 app.post("/logs", logController.createLog);
