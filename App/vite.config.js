@@ -8,4 +8,7 @@ export default defineConfig({
     port: 3000, // Especifique a porta desejada aqui
   },
   plugins: [react(),ReactRefresh()],
+  optimizeDeps: {
+    include: ['react-icons/all'], // or 'react-icons/Bs' if using a specific icon
+  },
 });
